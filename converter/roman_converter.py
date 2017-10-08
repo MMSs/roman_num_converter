@@ -3,7 +3,7 @@
 import sys
 
 
-def convert_toroman(num):
+def toroman(num):
     """
     Convert a decimal number to roman string
     :param num: Number to convert
@@ -50,7 +50,7 @@ def convert_toroman(num):
     return roman
 
 
-def convert_fromroman(roman):
+def fromroman(roman):
     """
     Convert a roman string into integer
     :param roman: The roman number
@@ -119,9 +119,9 @@ if __name__ == "__main__":
     try:
         num = sys.argv[1]
         if u"{}".format(num).isnumeric():
-            print(convert_toroman(int(num)))
+            print(toroman(int(num)))
         else:
-            print(str(convert_fromroman(str(num))))
+            print(str(fromroman(str(num))))
     except ValueError as err:
         print(err.message)
     except IndexError as err:
