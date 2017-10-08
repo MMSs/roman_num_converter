@@ -11,6 +11,7 @@ def toroman(num):
     :return: The roman representation
     :rtype: string
     """
+    
     # validate passed argument
     if not isinstance(num, int):
         raise ValueError("Not an intger")
@@ -58,6 +59,7 @@ def fromroman(roman):
     :return: The integer presentation
     :rtype: int
     """
+
     # Roman to decimal numerals map
     num_map = {
         "I": 1,
@@ -77,7 +79,7 @@ def fromroman(roman):
 
     roman = roman.upper()
     # Validate number
-    for i, r in enumerate(roman):
+    for r in roman:
         # Validate each character for being a valid roman symbol
         if r not in num_map.keys():
             raise ValueError("Not a roman numeral")
