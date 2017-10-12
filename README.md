@@ -1,4 +1,4 @@
-# Roman Numeral Converter
+# Roman Numeral Converter in Python
 
 This module implements two functions for conveting numerals between the two numeric systems, the roman and the decimal.
 
