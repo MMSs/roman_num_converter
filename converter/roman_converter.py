@@ -11,7 +11,7 @@ def toroman(num):
     :return: The roman representation
     :rtype: string
     """
-    
+
     # validate passed argument
     if not isinstance(num, int):
         raise ValueError("Not an intger")
@@ -103,11 +103,11 @@ def fromroman(roman):
                 raise ValueError("Invalid roman numeral")
             if n1 + n2 in num_map.values():
                 # Error for numeral double representation
-                # i.e. IVI as V
+                # i.e. IVI for V  or  VV for X
                 raise ValueError("Invalid roman numeral")
             if n1 / n2 < 2 and str(n1)[0] in ['4', '9']:
                 # Error for wrong subtractive numeral order
-                # if left number is less than duble the right number and in the group of 4s and 9s
+                # If left number is less than double the right number and in the group of 4s and 9s
                 # i.e. IXV as XIV  or  XCL as CXL
                 raise ValueError("Invalid roman numeral")
         if len(nums) > i+4 and nums[i] == nums[i+4]:
